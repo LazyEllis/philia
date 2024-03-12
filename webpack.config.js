@@ -35,6 +35,12 @@ module.exports = {
       chunks: ["common", "dashboard"],
       inject: "body",
     }),
+    new HtmlWebpackPlugin({
+      filename: "trash.html",
+      template: "./src/trash.html",
+      chunks: ["common", "dashboard"],
+      inject: "body",
+    }),
     new MiniCssExtractPlugin(),
   ],
   module: {
