@@ -41,6 +41,12 @@ module.exports = {
       chunks: ["common", "dashboard"],
       inject: "body",
     }),
+    new HtmlWebpackPlugin({
+      filename: "reauthentication.html",
+      template: "./src/reauthentication.html",
+      chunks: ["common", "dashboard"],
+      inject: "body",
+    }),
     new MiniCssExtractPlugin(),
   ],
   module: {

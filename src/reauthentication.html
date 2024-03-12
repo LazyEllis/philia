@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Philia | Re-authentication</title>
+  </head>
+  <body>
+    <div class="wrapper d-flex">
+      <aside id="sidebar">
+        <div class="d-flex">
+          <div class="sidebar-logo">
+            <a href="index.html"
+              ><img src="./assets/img/logo.png" alt="Philia"
+            /></a>
+          </div>
+        </div>
+        <ul class="sidebar-nav ps-0 pt-5">
+          <li class="sidebar-item mb-4">
+            <a href="files.html" class="sidebar-link btn text-start">
+              <i class="bi bi-folder-fill"></i>
+              <span>Files</span>
+            </a>
+          </li>
+          <li class="sidebar-item mb-4">
+            <a href="trash.html" class="sidebar-link btn text-start">
+              <i class="bi bi-trash3"></i>
+              <span>Trash</span>
+            </a>
+          </li>
+          <li class="sidebar-item mb-4">
+            <a
+              href="reauthentication.html"
+              class="sidebar-link btn text-start active"
+            >
+              <i class="bi bi-person"></i>
+              <span>Re-authentication</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <div class="main">
+        <div class="intro d-flex justify-content-between mb-5">
+          <div class="text">
+            <p class="mb-2 fs-4 fw-bold">Good Afternoon, Quamdeen</p>
+            <p>What files are we working on today?</p>
+          </div>
+        </div>
+        <div class="instruction mb-5">
+          <p class="mb-2 fs-5 fw-bold">Re-authentication required</p>
+          <p>You are required ro fill all correctly.</p>
+        </div>
+        <form>
+          <div class="mb-5">
+            <p class="mb-0 fw-bold">Security Question</p>
+            <label for="securityQuestion" class="form-label mb-3"
+              >What is the name of your first pet?</label
+            >
+            <input
+              type="text"
+              class="form-control w-50 bg-grey"
+              id="securityQuestion"
+              name="securityQuestion"
+              placeholder="Enter your answer"
+              required
+            />
+          </div>
+          <div class="mb-5 hidden">
+            <p class="mb-0 fw-bold">Account PIN</p>
+            <label for="accountPin" class="form-label mb-3"
+              >What is your account PIN?</label
+            >
+            <input
+              type="text"
+              class="form-control w-50 bg-grey"
+              id="accountPin"
+              name="accountPin"
+              placeholder="Enter your account PIN"
+              required
+              disabled
+            />
+          </div>
+          <button type="submit" class="btn btn-green text-white btn-small">
+            Re-authenticate
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
