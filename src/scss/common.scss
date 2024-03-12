@@ -1,0 +1,73 @@
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../assets/font/public-sans.regular-webfont.woff2") format("woff2"),
+    url("../assets/font/public-sans.regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$green: #104741;
+$grey: #f1f1f1;
+
+:root {
+  font-size: 20px;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  color: #104741;
+}
+
+.btn-green,
+.bg-grey,
+.btn-grey {
+  padding: 20px 30px;
+}
+
+.btn-green {
+  padding: 20px 30px;
+  background-color: $green;
+
+  &:hover {
+    background-color: #0c3a33;
+  }
+
+  &:active {
+    background-color: #0a2f2a !important;
+  }
+}
+
+.bg-grey {
+  background-color: $grey;
+}
+
+.btn-grey {
+  background-color: $grey;
+
+  &:hover {
+    background-color: #e0e0e0;
+  }
+
+  &:active {
+    background-color: #d1d1d1 !important;
+  }
+}
+
+.icon {
+  height: 35px;
+  width: 35px;
+}
+
+.bi-circle-fill {
+  color: #d2d2d2;
+
+  &.active {
+    color: $green;
+  }
+}
+.hidden {
+  display: none;
+}

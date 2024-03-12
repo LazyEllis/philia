@@ -1,14 +1,26 @@
-const path = require('path');
-const autoprefixer = require('autoprefixer');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require("path");
+const autoprefixer = require("autoprefixer");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    common: "./src/js/common.js",
+    index: "./src/js/index.js",
+    signup: "./src/js/signup.js",
+  },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
-      inject: 'body',
+      filename: "index.html",
+      template: "./src/index.html",
+      chunks: ["common", "index"],
+      inject: "body",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "signup.html",
+      template: "./src/signup.html",
+      chunks: ["common", "signup"],
+      inject: "body",
     }),
     new MiniCssExtractPlugin(),
   ],
@@ -16,7 +28,7 @@ module.exports = {
     rules: [
       {
         test: /\.html$/i,
-        loader: 'html-loader',
+        loader: "html-loader",
       },
       {
         test: /\.(scss)$/,
@@ -25,10 +37,10 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
           },
           {
-            loader: 'css-loader',
+            loader: "css-loader",
           },
           {
-            loader: 'postcss-loader',
+            loader: "postcss-loader",
             options: {
               postcssOptions: {
                 plugins: [autoprefixer],
@@ -36,23 +48,23 @@ module.exports = {
             },
           },
           {
-            loader: 'sass-loader',
+            loader: "sass-loader",
           },
         ],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
       },
     ],
   },
   output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, "dist"),
     clean: true,
   },
 };
