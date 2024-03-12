@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Philia | Sign In</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header text-end mt-4">
+        <a href="index.html"
+          ><img src="assets/img/logo.png" alt="Philia" class="logo"
+        /></a>
+      </div>
+      <div class="main">
+        <h1 class="fs-5 fw-bold">Sign into your philia account</h1>
+        <p>Enter your details to sign in.</p>
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Username</label>
+            <input
+              type="text"
+              class="form-control w-50 bg-grey"
+              id="username"
+              name="username"
+              placeholder="Enter your username"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control w-50 bg-grey"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <button type="submit" class="btn btn-green text-white w-50">
+              Sign in
+            </button>
+          </div>
+        </form>
+        <p class="text-center w-50">or sign into your account using</p>
+        <button class="btn btn-grey w-50">
+          <img src="assets/img/google.svg" class="icon me-1" alt="Google" />
+          <span>Google</span>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

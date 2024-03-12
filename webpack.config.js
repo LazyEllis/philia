@@ -7,7 +7,7 @@ module.exports = {
   entry: {
     common: "./src/js/common.js",
     index: "./src/js/index.js",
-    signup: "./src/js/signup.js",
+    sign_up: "./src/js/sign_up.js",
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -17,9 +17,15 @@ module.exports = {
       inject: "body",
     }),
     new HtmlWebpackPlugin({
-      filename: "signup.html",
-      template: "./src/signup.html",
-      chunks: ["common", "signup"],
+      filename: "sign_up.html",
+      template: "./src/sign_up.html",
+      chunks: ["common", "sign_up"],
+      inject: "body",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "sign_in.html",
+      template: "./src/sign_in.html",
+      chunks: ["common"],
       inject: "body",
     }),
     new MiniCssExtractPlugin(),
