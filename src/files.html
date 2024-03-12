@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Philia | Files</title>
+  </head>
+  <body>
+    <div class="wrapper d-flex">
+      <aside id="sidebar">
+        <div class="d-flex">
+          <div class="sidebar-logo">
+            <a href="index.html"
+              ><img src="./assets/img/logo.png" alt="Philia"
+            /></a>
+          </div>
+        </div>
+        <ul class="sidebar-nav ps-0 pt-5">
+          <li class="sidebar-item mb-4">
+            <a href="#" class="sidebar-link btn text-start active">
+              <i class="bi bi-folder-fill"></i>
+              <span>Files</span>
+            </a>
+          </li>
+          <li class="sidebar-item mb-4">
+            <a href="#" class="sidebar-link btn text-start">
+              <i class="bi bi-trash3"></i>
+              <span>Trash</span>
+            </a>
+          </li>
+          <li class="sidebar-item mb-4">
+            <a href="#" class="sidebar-link btn text-start">
+              <i class="bi bi-person"></i>
+              <span>Re-authentication</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <div class="main">
+        <div class="intro d-flex justify-content-between mb-5">
+          <div class="text">
+            <p class="mb-2 fs-4 fw-bold">Good Afternoon, Quamdeen</p>
+            <p>What files are we working on today?</p>
+          </div>
+          <div class="alert fade show d-flex align-items-center hidden">
+            <i class="bi bi-check-circle me-2"></i>
+            <div>File access granted!</div>
+          </div>
+        </div>
+        <div class="tab d-flex align-items-end justify-content-between mb-4">
+          <div class="tab-title">All Files (<span>0</span>)</div>
+          <label for="upload" class="btn btn-green btn-small text-white">
+            <i class="bi bi-upload me-2"></i>
+            <span>Upload file</span>
+          </label>
+          <input type="file" id="upload" hidden />
+        </div>
+        <table class="table table-borderless">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Date Added</th>
+              <th scope="col">Last Modified</th>
+              <th scope="col">Creator</th>
+              <th scope="col">Size</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
