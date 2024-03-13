@@ -7,10 +7,10 @@
   </head>
   <body>
     <div class="container">
-      <div class="header text-end mt-4">
-        <a href="index.html"
-          ><img src="assets/img/logo.png" alt="Philia" class="logo"
-        /></a>
+      <div class="header text-end my-4">
+        <a href="index.html">
+          <img src="assets/img/logo.png" alt="Philia" class="logo" />
+        </a>
       </div>
       <div class="main">
         <h1 class="fs-5 fw-bold">Creating a philia account</h1>
@@ -18,11 +18,11 @@
           <div class="subheading">
             <p>Let's start with the basics</p>
           </div>
-          <div class="subheading hidden">
+          <div class="subheading d-none">
             <p class="mb-0">Moving on, security details</p>
             <p>Pick between security question or account PIN</p>
           </div>
-          <div class="subheading hidden">
+          <div class="subheading d-none">
             <p>And lastly, the final layer</p>
           </div>
         </div>
@@ -33,13 +33,13 @@
           <div><i class="bi bi-circle-fill me-3 pagination-circle"></i></div>
           <div><i class="bi bi-circle-fill me-3 pagination-circle"></i></div>
         </div>
-        <form>
+        <form action="files.html">
           <div class="page" data-page="1">
             <div class="mb-3">
               <label for="name" class="form-label">Full Name</label>
               <input
                 type="text"
-                class="form-control w-50 bg-grey"
+                class="form-control bg-grey"
                 id="name"
                 name="name"
                 placeholder="Enter your full name"
@@ -50,7 +50,7 @@
               <label for="email" class="form-label">Email Address</label>
               <input
                 type="email"
-                class="form-control w-50 bg-grey"
+                class="form-control bg-grey"
                 id="email"
                 name="email"
                 placeholder="Enter your email address"
@@ -61,7 +61,7 @@
               <label for="password" class="form-label">Password</label>
               <input
                 type="password"
-                class="form-control w-50 bg-grey"
+                class="form-control bg-grey"
                 id="password"
                 name="password"
                 placeholder="Create a strong password"
@@ -69,7 +69,7 @@
               />
             </div>
           </div>
-          <div class="page hidden" data-page="2">
+          <div class="page d-none" data-page="2">
             <div class="mb-3">
               <div class="form-check form-check-inline">
                 <input
@@ -104,7 +104,7 @@
                 >
                 <input
                   type="text"
-                  class="form-control w-50 bg-grey"
+                  class="form-control bg-grey"
                   id="securityQuestion"
                   name="securityQuestion"
                   placeholder="Enter a security question"
@@ -115,7 +115,7 @@
                 <label for="answer" class="form-label">Answer</label>
                 <input
                   type="text"
-                  class="form-control w-50 bg-grey"
+                  class="form-control bg-grey"
                   id="answer"
                   name="answer"
                   placeholder="Enter your answer to the question"
@@ -123,12 +123,12 @@
                 />
               </div>
             </div>
-            <div class="account-pin hidden">
+            <div class="account-pin d-none">
               <div class="mb-3">
                 <label for="pin" class="form-label">Account Pin</label>
                 <input
                   type="password"
-                  class="form-control w-50 bg-grey"
+                  class="form-control bg-grey"
                   id="pin"
                   name="pin"
                   placeholder="Enter a 6-digit pin"
@@ -138,7 +138,7 @@
               </div>
             </div>
           </div>
-          <div class="page hidden" data-page="3">
+          <div class="page d-none" data-page="3">
             <div class="mb-3">
               <p>Add captcha here</p>
             </div>
@@ -147,17 +147,17 @@
             <div class="mb-3">
               <button
                 type="button"
-                class="btn btn-green text-white w-50 next-button"
+                class="btn btn-green text-white w-100 next-button"
               >
                 Next
               </button>
             </div>
           </div>
-          <div class="submit-button-container hidden">
+          <div class="submit-button-container d-none">
             <div class="mb-3">
               <button
                 type="submit"
-                class="btn btn-green text-white w-50 submit-button"
+                class="btn btn-green text-white w-100 submit-button"
               >
                 Finish
               </button>
@@ -165,8 +165,8 @@
           </div>
         </form>
         <div class="alternative-link">
-          <p class="text-center w-50">or create an account using</p>
-          <button class="btn btn-grey w-50">
+          <p class="text-center">or create an account using</p>
+          <button class="btn btn-grey w-100">
             <img src="assets/img/google.svg" class="icon me-1" alt="Google" />
             <span>Google</span>
           </button>

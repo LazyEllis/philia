@@ -18,25 +18,52 @@ $grey: #f1f1f1;
 
 body {
   font-family: "Public Sans", sans-serif;
-  color: #104741;
+  color: #000;
 }
 
-.btn-green,
-.bg-grey,
-.btn-grey {
+.logo {
+  max-width: 100px;
+}
+
+.subtitle {
+  max-width: 696px;
+}
+
+.btn {
   padding: 20px 30px;
+
+  &.btn-small {
+    padding: 15px;
+  }
+
+  &.btn-icon {
+    padding: 8px;
+
+    .navbar-toggler-icon {
+      filter: invert(20%) sepia(19%) saturate(1635%) hue-rotate(124deg)
+        brightness(96%) contrast(90%) opacity(50%);
+    }
+
+    &:hover {
+      background-color: $green;
+
+      .navbar-toggler-icon {
+        filter: invert(98%) sepia(2%) saturate(0%) hue-rotate(218deg)
+          brightness(103%) contrast(103%);
+      }
+    }
+  }
 }
 
 .btn-green {
-  padding: 20px 30px;
   background-color: $green;
 
   &:hover {
-    background-color: #0c3a33;
+    background-color: darken($green, 2.5%);
   }
 
   &:active {
-    background-color: #0a2f2a !important;
+    background-color: darken($green, 5%) !important;
   }
 }
 
@@ -48,11 +75,19 @@ body {
   background-color: $grey;
 
   &:hover {
-    background-color: #e0e0e0;
+    background-color: darken($grey, 3.75%);
   }
 
   &:active {
-    background-color: #d1d1d1 !important;
+    background-color: darken($grey, 7.5%) !important;
+  }
+}
+
+.form-control {
+  padding: 20px 30px;
+
+  &.form-control-small {
+    padding: 20px;
   }
 }
 
@@ -61,13 +96,10 @@ body {
   width: 35px;
 }
 
-.bi-circle-fill {
+.pagination-circle {
   color: #d2d2d2;
 
   &.active {
     color: $green;
   }
-}
-.hidden {
-  display: none;
 }

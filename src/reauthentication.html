@@ -7,15 +7,26 @@
   </head>
   <body>
     <div class="wrapper d-flex">
-      <aside id="sidebar">
-        <div class="d-flex">
+      <aside
+        class="sidebar offcanvas-lg offcanvas-start"
+        tabindex="-1"
+        id="sidebar"
+      >
+        <div class="d-flex justify-content-between align-items-center">
           <div class="sidebar-logo">
             <a href="index.html"
               ><img src="./assets/img/logo.png" alt="Philia"
             /></a>
           </div>
+          <div>
+            <button
+              class="btn-close d-lg-none"
+              data-bs-dismiss="offcanvas"
+              data-bs-target="#sidebar"
+            ></button>
+          </div>
         </div>
-        <ul class="sidebar-nav ps-0 pt-5">
+        <ul class="sidebar-nav ps-0 pt-5 list-unstyled">
           <li class="sidebar-item mb-4">
             <a href="files.html" class="sidebar-link btn text-start">
               <i class="bi bi-folder-fill"></i>
@@ -40,6 +51,17 @@
         </ul>
       </aside>
       <div class="main">
+        <div class="navbar d-lg-none mb-3">
+          <div class="d-flex align-items-center">
+            <button
+              class="btn btn-icon"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#sidebar"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
         <div class="intro d-flex justify-content-between mb-5">
           <div class="text">
             <p class="mb-2 fs-4 fw-bold">Good Afternoon, Quamdeen</p>
@@ -58,21 +80,21 @@
             >
             <input
               type="text"
-              class="form-control w-50 bg-grey"
+              class="form-control form-control-small bg-grey"
               id="securityQuestion"
               name="securityQuestion"
               placeholder="Enter your answer"
               required
             />
           </div>
-          <div class="mb-5 hidden">
+          <div class="mb-5 d-none">
             <p class="mb-0 fw-bold">Account PIN</p>
             <label for="accountPin" class="form-label mb-3"
               >What is your account PIN?</label
             >
             <input
               type="text"
-              class="form-control w-50 bg-grey"
+              class="form-control bg-grey"
               id="accountPin"
               name="accountPin"
               placeholder="Enter your account PIN"
@@ -80,7 +102,10 @@
               disabled
             />
           </div>
-          <button type="submit" class="btn btn-green text-white btn-small">
+          <button
+            type="submit"
+            class="btn btn-green w-100 text-white btn-small"
+          >
             Re-authenticate
           </button>
         </form>

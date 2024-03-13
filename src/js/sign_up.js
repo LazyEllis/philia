@@ -23,7 +23,7 @@ const toggleInputs = (...inputs) => {
 
 const toggleHidden = (...elements) => {
   elements.forEach((element) => {
-    element.classList.toggle("hidden");
+    element.classList.toggle("d-none");
   });
 };
 
@@ -34,7 +34,7 @@ const toggleActive = (...circles) => {
 };
 
 const validatePage = () => {
-  const page = document.querySelector(".page:not(.hidden)");
+  const page = document.querySelector(".page:not(.d-none)");
   const inputs = page.querySelectorAll("input");
   let valid = true;
   let invalidInputs = [];
@@ -54,10 +54,10 @@ const validatePage = () => {
 };
 
 const changePage = () => {
-  const currentPage = document.querySelector(".page:not(.hidden)");
+  const currentPage = document.querySelector(".page:not(.d-none)");
   if (validatePage()) {
     if (currentPage.nextElementSibling.dataset.page !== "1") {
-      alternativeLink.classList.add("hidden");
+      alternativeLink.classList.add("d-none");
     }
 
     if (currentPage.nextElementSibling.dataset.page === "3") {

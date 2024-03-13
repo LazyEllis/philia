@@ -6,7 +6,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   entry: {
     common: "./src/js/common.js",
-    index: "./src/js/index.js",
     sign_up: "./src/js/sign_up.js",
     dashboard: "./src/js/dashboard.js",
   },
@@ -14,7 +13,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./src/index.html",
-      chunks: ["common", "index"],
+      chunks: ["common"],
       inject: "body",
     }),
     new HtmlWebpackPlugin({
