@@ -105,4 +105,4 @@ Contributions are welcome! If you'd like to contribute to Philia, please follow 
 
 ## License
 
-This project is licensed under the ISC License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the ISC License. See the [LICENSE](LICENSE.md) file for details.
