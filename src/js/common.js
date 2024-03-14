@@ -3,6 +3,7 @@ import "../scss/common.scss";
 
 // Function to close the alert after a delay
 export const closeAlert = () => {
+  if (!document.querySelector(".alert")) return;
   setTimeout(() => {
     const alert = new bootstrap.Alert(document.querySelector(".alert"));
     alert.close();
